@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TI em Crise</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+<header class="topo">
+    <div class="logo">TI</div>
+    <div>
+        <h1>TI em crise</h1>
+        <p>Centro de operações de serviços</p>
+    </div>
+    <span class="status"><span class="ponto"></span>OPERAÇÃO EM ANDAMENTO</span>
+</header>
+<main class="conteiner">
+    <section class="introducao">
+        <div>
+            <p class="etiqueta">SIMULAÇÃO ITIL · MISSÃO 01</p>
+            <h2 class="tituloFase">O sistema de vendas parou</h2>
+            <p id="descricaoFase">Investigue as pistas, coordene a equipe e restaure os serviços.</p>
+        </div>
+        <div class="numero-fase">
+            <span>ETAPA</span>
+            <strong id="numeroFase">1/4</strong>
+        </div>
+    </section>
+
+    <section class="indicadores">
+        <article class="cartao-indicador">
+            <p>Saúde dos serviços</p>
+            <div class="numero"><strong       id="saude">8</strong><span>/10</span></div>
+
+            <div class="barra">
+                <div id="barraSaude" class="preencimento.verde"></div>
+            </div>
+
+            <small id="textoSaude">Serviço estável</small>
+        </article>
+
+        <article class="cartao.indicador">
+            <p>Objetivos concluídos</p>
+            <div class="numero">
+                <strong id="objetivos">0</strong><span id="totalObjetivos">/10</span>
+            </div>
+
+            <div class="barra">
+                <div id="barraObjetivos" class="preencimento.azul"></div>
+            </div>
+            <small>Progresso da missão</small>
+        </article>
+
+        <article class="cartao-indicador">
+            <p>Ações restantes</p>
+            <div class="numero"><strong id="acoes">4</strong></div>
+            <small>Disponíveis nesta etapa</small>
+        </article>
+    </section>
+
+    <div class="colunas">
+        <div class="coluna-principal">
+            <section class="cartao">
+                <div class="cabecalho-secao">
+                    <div>
+                        <p class="etiqueta">CENTRAL DE CHAMADOS</p>
+                        <h3>Chamados ativos</h3>
+                    </div>
+                    <span class="contador" id="contadorChamados">3 chamados</span>
+                </div>
+                <div id="listaChamados" class="lista"></div>
+            </section>
+
+            <section class="cartao">
+                <div class="cabecalho-secao">
+                    <div>
+                        <p class="etiqueta">INVESTIGAÇÃO</p>
+                        <h3>Registros e pistas</h3>
+                    </div>
+                    <span class="contador" id="contadorPistas">0/3 pistas</span>
+                </div>
+                <p class="explicacao">Clique nos registros para descobrir evidências. Investigar pistas não consome ações.</p>
+
+                <div id="listaPistas" class="lista"></div>
+            </section>
+            
+            <section class="cartao">
+                <div class="cabecalho-secao">
+                    <div>
+                        <p class="etiqueta">PLANO DE RESPOSTA</p>
+                        <h3>Ações disponíveis</h3>
+                    </div>
+                </div>
+
+                <div id="listaAcoes" class="lista"></div>
+                <div id="mensagem" class="mensagem">
+                    Coemce investigando as pistas disponíveis.
+                </div>
+
+                <button id="avancar" class="botao-principal" hidden>Avançar para próxima etapa -></button>
+                <button id="reiniciar" class="botao-secundario" hidden>Reiniciar missão</button>
+            </section>
+        </div>
+
+        <aside class="coluna-lateral">
+            <section class="cartao">
+                <div class="cabecalho-secao">
+                    <div>
+                        <p class="etiqueta">EQUIPE COOPERATIVA</p>
+                        <h3>Funções dos jogadores</h3>
+                    </div>
+                </div>
+                <label for="quantidadeJogadores">Quantidade de jogadores</label>
+
+                <select id="quantidadeJogadores">
+                    <option value="4">4 jogadores</option>
+                    <option value="5">5 jogadores</option>
+                    <option value="6" selected>6 jogadores</option>
+                </select>
+                <div id="listaFuncoes" class="lista"></div>
+                <p class="nota">Compaertilhe as pistas com a equipe antes de decidir qual ação executar.</p>
+            </section>
+
+            <section class="cartao">
+                <div class="cabecalho-secao">
+                    <div>
+                        <p class="etiqueta">REGISTRO DA OPERAÇÃO</p>
+                        <h3>Histórico</h3>
+                    </div>
+                </div>
+                <div id="historico" class="historico"></div>
+            </section>
+
+            <section class="cartao">
+                <p class="etiqueta">OBJETIVO DA MISSÃO</p>
+                <h3>Restaurar e melhorar</h3>
+                <ul class="objetivos">
+                    <li>Investigar evidências</li>
+                    <li>Restaurar os serviços</li>
+                    <li>Investigar falhas recorrentes</li>
+                    <li>Planejar melhorias</li>
+                </ul>
+            </section>
+        </aside>
+    </div>
+</main>
+
+<footer>Projeto acadêmico demonstrativo · Práticas inspiradas no ITIL 4
+    <p>&2026</p>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>

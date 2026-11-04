@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --fundo: #0b1120;
+    --cartao: #121c2e;
+    --borda: #29384f;
+    --texto: #edf3fc;
+    --texto-secundario: #93a4bc;
+    --verde: #38d9a9;
+    --vermelho: #ff727c;
+    --laranja: #ffbd69;
+}
+
+body{
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.topo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 5%;
+    border-bottom: 1px solid var(--borda);
+    background: #0d1627;
+}
+.logo{
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--verde);
+    color: #07131b;
+    font-weight: bold;
+    font-size: 20px;
+}
+.topo h1{
+    margin: 0;
+    font-size: 19px;
+}
+.topo p{
+    margin: 4px 0 0;
+    color: var(--texto-secundario);
+    font-size: 12px;
+}
+.status{
+    margin-left: auto;
+    color: var(--verde);
+    font-size: 11px;
+    font-weight: bold;
+}
+.ponto{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 6px;
+    border-radius: 50%;
+    background: var(--verde);
+}
+.container{
+    max-width: 1450px;
+    margin: auto;
+    padding: 28px 4%;
+}
+.introducao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 26px;
+    border: 1px solid #2b405a;
+    border-radius: 16px;
+    background: linear-gradient(120deg, #152942, #142033);
+}
+.etiqueta{
+    margin: 0 0 8px;
+    color: var(--verde);
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+}
+.introducao h2{
+    margin: 0 0 10px;
+    font-size: 27px;
+}
+.introducao p:not(.etiqueta){
+    max-width: 700px;
+    margin: 0;
+    color: #b2c0d4;
+    font-size: 13px;
+    line-height: 1.6;
+}
+.numero-fase span{
+    color: var(--texto-secundario);
+    font-size: 10px;
+}
+.numero-fase strong{
+    margin-top: 5px;
+    font-size: 23px;
+}
+.indicadores{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 18px 0;
+}
+.cartao{
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid var(--borda);
+    border-radius: 15px;
+    background: var(--cartao);
+}

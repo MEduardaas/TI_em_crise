@@ -1,23 +1,42 @@
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+
 *{
     box-sizing: border-box;
 }
 
 :root{
+
     --fundo: #0b1120;
     --cartao: #121c2e;
     --borda: #29384f;
     --texto: #edf3fc;
     --texto-secundario: #93a4bc;
     --verde: #38d9a9;
+
+    --azul: #68a8ff;
+
+ main
     --vermelho: #ff727c;
     --laranja: #ffbd69;
 }
 
+
+body {
 body{
+ main
     margin: 0;
     background: var(--fundo);
     color: var(--texto);
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.topo {
 }
 .topo{
     display: flex;
@@ -27,15 +46,52 @@ body{
     border-bottom: 1px solid var(--borda);
     background: #0d1627;
 }
+
+
+.logo {
 .logo{
+
     display: grid;
     place-items: center;
     width: 44px;
     height: 44px;
+
+    flex-shrink: 0;
+
     border-radius: 12px;
     background: var(--verde);
     color: #07131b;
     font-weight: bold;
+    font-size: 22px;
+}
+
+.topo h1 {
+    margin: 0;
+    font-size: 19px;
+}
+
+.topo p {
+    margin: 4px 0 0;
+    color: var(--texto-secundario);
+    font-size: 16px;
+}
+
+.topo-titulo {
+    min-width: 0;
+}
+
+.topo-acoes {
+    margin-left: auto;
+}
+
+.status {
+    color: var(--verde);
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.ponto {
     font-size: 20px;
 }
 .topo h1{
@@ -61,11 +117,18 @@ body{
     border-radius: 50%;
     background: var(--verde);
 }
+
+.container {
+
 .container{
+
     max-width: 1450px;
     margin: auto;
     padding: 28px 4%;
 }
+
+.introducao {
+
 .introducao{
     display: flex;
     justify-content: space-between;
@@ -76,6 +139,52 @@ body{
     border-radius: 16px;
     background: linear-gradient(120deg, #152942, #142033);
 }
+
+.etiqueta {
+    margin: 0 0 8px;
+    color: var(--verde);
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+}
+
+.introducao h2 {
+    margin: 0 0 10px;
+    font-size: 27px;
+}
+
+.introducao p:not(.etiqueta) {
+    max-width: 700px;
+    margin: 0;
+    color: #b2c0d4;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.numero-fase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+    height: 80px;
+    border: 1px solid #34506b;
+    border-radius: 14px;
+    background: #0f1c2e;
+}
+
+.numero-fase span {
+    color: var(--texto-secundario);
+    font-size: 16px;
+}
+
+.numero-fase strong {
+    margin-top: 5px;
+    font-size: 23px;
+}
+
+.indicadores {
+
 .etiqueta{
     margin: 0 0 8px;
     color: var(--verde);
@@ -108,10 +217,495 @@ body{
     gap: 14px;
     margin: 18px 0;
 }
+
+.cartao {
+
 .cartao{
     min-width: 0;
     padding: 20px;
     border: 1px solid var(--borda);
     border-radius: 15px;
     background: var(--cartao);
+}
+
+.cartao-indicador > p {
+    margin: 0;
+    color: var(--texto-secundario);
+    font-size: 12px;
+}
+
+.numero {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    margin: 12px 0;
+}
+
+.numero strong {
+    font-size: 30px;
+}
+
+.numero span {
+    color: var(--texto-secundario);
+    font-size: 13px;
+}
+
+.barra {
+    height: 5px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #26364c;
+}
+
+.preenchimento {
+    height: 100%;
+    width: 0;
+    transition: width 0.25s;
+}
+
+.verde { background: var(--verde); }
+.azul { background: var(--azul); }
+
+.cartao-indicador small {
+    display: block;
+    margin-top: 9px;
+    color: var(--texto-secundario);
+    font-size: 11px;
+}
+
+.colunas {
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.85fr);
+    gap: 20px;
+}
+
+.coluna-principal,
+.coluna-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-width: 0;
+}
+
+.cabecalho-secao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.cabecalho-secao .etiqueta {
+    margin-bottom: 5px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.contador {
+    padding: 6px 9px;
+    border: 1px solid #304159;
+    border-radius: 7px;
+    color: var(--texto-secundario);
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chamado,
+.pista,
+.acao,
+.funcao {
+    padding: 13px;
+    border: 1px solid #29394f;
+    border-radius: 11px;
+    background: #101a2b;
+}
+
+.chamado h4,
+.pista h4,
+.acao h4 {
+    margin: 0 0 6px;
+    font-size: 12px;
+}
+
+.chamado p,
+.pista p,
+.acao p,
+.funcao p {
+    margin: 0;
+    color: var(--texto-secundario);
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.etiquetas-chamado {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 9px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px 6px;
+    border-radius: 5px;
+    background: #263246;
+    color: #c5d2e4;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.tag.critico { background: #3a202d; color: #ff9da4; }
+.tag.medio { background: #3b3023; color: var(--laranja); }
+
+.explicacao {
+    margin: -4px 0 14px;
+    color: var(--texto-secundario);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.pista {
+    width: 100%;
+    color: var(--texto);
+    text-align: left;
+    cursor: pointer;
+}
+
+.pista:hover:not(:disabled) {
+    border-color: var(--azul);
+    background: #15243a;
+}
+
+.pista:disabled {
+    cursor: default;
+}
+
+.pista.nao-descoberta {
+    border-style: dashed;
+}
+
+.acao {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.acao-texto {
+    flex: 1;
+}
+
+.acao button {
+    padding: 10px 12px;
+    border: 2px solid #315f59;
+    border-radius: 8px;
+    background: #153b38;
+    color: #a7f3d6;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.acao button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.mensagem {
+    margin-top: 14px;
+    padding: 12px;
+    border: 1px solid #2b4154;
+    border-radius: 9px;
+    background: #101b2a;
+    color: #b5c5d9;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.mensagem.sucesso {
+    border-color: #276052;
+    color: #9be8cb;
+}
+
+.mensagem.erro {
+    border-color: #6b3943;
+    color: #ffabb2;
+}
+
+.botao-principal,
+.botao-secundario {
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 9px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao-principal {
+    border: 0;
+    background: var(--verde);
+    color: #092019;
+}
+
+.botao-secundario {
+    border: 1px solid var(--borda);
+    background: transparent;
+    color: var(--texto);
+}
+
+.topo .botao-secundario {
+    width: auto;
+    margin-top: 0;
+    white-space: nowrap;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--texto-secundario);
+    font-size: 18px;
+}
+
+select {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #30415a;
+    border-radius: 8px;
+    background: #0e1726;
+    color: var(--texto);
+}
+
+.funcao {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+}
+
+.funcao > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.sigla {
+    display: grid;
+    place-items: center;
+    width: 56px;
+    min-width: 56px;
+    height: 34px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #203249;
+    color: var(--azul);
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.funcao strong {
+    display: block;
+    margin: 2px 0 5px;
+    font-size: 16px;
+}
+
+.nota {
+    color: var(--texto-secundario);
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+.historico-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #263449;
+    color: #b4c2d5;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.historico-item:first-child {
+    padding-top: 0;
+}
+
+.objetivos {
+    padding-left: 18px;
+    color: var(--texto-secundario);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+footer {
+    padding: 20px;
+    border-top: 1px solid var(--borda);
+    color: #71829a;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* MENU INICIAL */
+.menu-inicial {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--fundo);
+    text-align: center;
+    padding: 30px;
+}
+
+.menu-conteudo {
+    width: 100%;
+    max-width: 450px;
+}
+
+.menu-logo {
+    margin: 0 auto 20px;
+}
+
+.menu-conteudo h1 {
+    font-size: 42px;
+    margin: 15px 0 5px;
+}
+
+.menu-conteudo > p:not(.etiqueta) {
+    color: var(--texto-secundario);
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+.menu-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.menu-botoes button {
+    margin-top: 0;
+}
+
+@media (max-width: 950px) {
+    .colunas {
+        grid-template-columns: 1fr;
+    }
+
+    .coluna-lateral {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+
+    .coluna-lateral .cartao:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 700px) {
+    .topo {
+        flex-wrap: wrap;
+    }
+
+    .topo-acoes {
+        margin-left: 0;
+    }
+
+    .status {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .introducao {
+        padding: 19px;
+    }
+
+    .introducao h2 {
+        font-size: 21px;
+    }
+
+    .numero-fase {
+        min-width: 62px;
+        height: 65px;
+    }
+
+    .indicadores {
+        grid-template-columns: 1fr;
+    }
+
+    .coluna-lateral {
+        display: flex;
+    }
+
+    .cartao {
+        padding: 16px;
+    }
+
+    .acao {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .acao button {
+        margin-left: 0;
+    }
+
+    .menu-conteudo h1 {
+        font-size: 34px;
+    }
+}
+/* Aumentar textos pequenos do jogo */
+body {
+    font-size: 18px;
+}
+
+/* Descrições e informações dos cartões */
+main p,
+main small,
+main label {
+    font-size: 18px !important;
+    line-height: 1.5;
+}
+
+/* Textos dos chamados, pistas, funções e histórico */
+#listaChamados p,
+#listaPistas p,
+#listaFuncoes p,
+#historico p {
+    font-size: 18px !important;
+    line-height: 1.5;
+}
+
+/* Indicadores do painel */
+.cartao-indicador {
+    font-size: 16px;
+}
+/* Títulos dos chamados, pistas e ações */
+main h4,
+main strong {
+    font-size: 16px !important;
+}
+
+/* Descrições */
+main p,
+main small {
+    font-size: 17px !important;
+    line-height: 1.6;
+}
+
+/* Informações e etiquetas */
+main span,
+main label {
+    font-size: 15px !important;
 }
